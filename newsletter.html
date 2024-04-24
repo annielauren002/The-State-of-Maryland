@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay In Touch</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Didact+Gothic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7633b8e6eb.js" crossorigin="anonymous"></script>
+
+    <style>
+        form{
+            margin-bottom: 25px;
+        }
+        aside{
+            width: 500px;
+            border: none;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="./images/logo.png" alt="" class="logo">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./history.html">Our History</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <li class="city-btn"><a href="./cities.html">Cities <i class="fa-solid fa-arrow-down"></i></a></li>
+                </button>
+                <div class="dropdown-content">
+                    <a href="./annapolis.html">Annapolis</a>
+                    <a href="./baltimore.html">Baltimore</a>
+                    <a href="./frederick.html">Frederick</a>
+                </div>
+            </div>
+        </ul>
+        <a href="./newsletter.html"><button class="nav-btn">Newsletter</button></a>
+    </nav>
+
+    <section>
+    <form class="sign-up" action="#">
+        <header>
+        <h1>Stay In Touch!</h1>
+        </header>
+        <ul class="form-content">
+        <div class="name-flex-container">
+            <li class="form-content" id="name">
+                <label for="fname"></label>
+                <input required type="text" id="fname" placeholder="Enter First Name">
+            </li>
+            <li id="name">
+                <label for="lname"></label>
+                <input required type="text" id="lname" placeholder="Enter Last Name">
+            </li>
+        </div>
+            <li>
+                <label for="email"></label>
+                <input required type="text" id="email" placeholder="Enter Email">
+            </li>
+            <li>
+                <label for="confirm-email"></label>
+                <input required type="text" id="confirm-email" placeholder="Confirm Email">
+            </li>
+            <li>
+                <label for="text-box"></label>
+                <input type="text" id="text-box" placeholder="Comments, Questions, or Concerns">
+            </li>
+            <li id="agree">
+                <input required type="checkbox" name="agree" id="agree">
+                <label for="agree">I accept the Terms of Use & Privacy Policy.</label>
+            </li>
+            <br>
+            <a href="./newsletter.html"><button class="form-button">Sign Up Today!</button></a>
+
+        </ul>
+        </form>
+    </section>
+
+    <aside>
+        <h3>Is our website not working??</h3>
+        <h4>Email us at techhelp@marylandstate.com for help!</h4>
+    </aside>
+
+    <script>
+        document.querySelector('.form-button').onclick = function(){
+            var email = document.querySelector('#email').value,
+                confirmEmail = document.querySelector('#confirm-email').value;
+
+                if (email != confirmEmail){
+                    alert("Email does not match. Please re-enter and try again.");
+                    return false
+                }
+        }
+    </script>
+
+    
+</body>
+</html>
